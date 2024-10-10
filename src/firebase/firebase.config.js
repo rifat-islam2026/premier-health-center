@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCsKWzDfosYWkZmZc3D5PT66OIcWaZ1qhM",
-  authDomain: "premier-health-center.firebaseapp.com",
-  projectId: "premier-health-center",
-  storageBucket: "premier-health-center.appspot.com",
-  messagingSenderId: "915191531485",
-  appId: "1:915191531485:web:9190f563761d46652cd834"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APIID
 };
 
 // Initialize Firebase

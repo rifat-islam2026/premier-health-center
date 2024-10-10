@@ -7,7 +7,7 @@ function Header() {
     <li><NavLink to="/services">Services</NavLink></li>
     </>
   return (
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-primary text-primary-content">
           <div className="navbar-start">
               <div className="dropdown">
                   <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ function Header() {
                       {navLinks}
                   </ul>
               </div>
-              <Link to="/" className="text-2xl font-bold">Premier Health Center</Link>
+              <Link to="/" className="text-sm md:text-2xl font-bold">Premier Health Center</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1 font-semibold">
@@ -38,7 +38,7 @@ function Header() {
               </ul>
           </div>
           <div className="navbar-end">
-              <a className="btn">Login</a>
+              <Link to="/login" className="btn">Login</Link>
           </div>
       </div>
   )
