@@ -4,7 +4,7 @@ import Header from "../../pages/Header/Header"
 
 function Root() {
     return (
-        <div>
+        <div className="font-poppins">
             <Header />
             <div className="max-w-6xl mx-auto"><Outlet /></div>
             <Footer />

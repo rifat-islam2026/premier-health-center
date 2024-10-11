@@ -1,13 +1,39 @@
+import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 function Login() {
+    const { signInUser } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState('');
+    const navigate = useNavigate();
+
     const handelLogin = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password);
+        const accept = e.target.terms.checked;
+
+        // reset error 
+        setLoginError('');
+
+        if (!accept) {
+            setLoginError('Please accept your terms and conditions.')
+            return;
+        }
+        // signIn user 
+        signInUser(email, password)
+            .then(result => {
+                alert("Login successfully")
+                e.target.reset()
+                navigate('/')
+                console.log(result.user);
+            })
+            .catch(error => {
+                setLoginError(error.message)
+                console.log(error)
+            })
     }
     return (
         <div>
@@ -20,6 +46,9 @@ function Login() {
                         <form
                             onSubmit={handelLogin}
                             className="card-body">
+                            {
+                                loginError && <p className="text-red-600 bg-red-200 p-2 my-2">{loginError}</p>
+                            }
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>

@@ -1,14 +1,49 @@
+import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+
 
 function Register() {
+    const { createUser } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    const navigate = useNavigate();
+
     const handelRegister = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(name, email, password);
+        const accept = e.target.terms.checked;
+        // console.log(accept);
+        
+        // reset error 
+        setRegisterError('')
+
+        if (!password.length > 6) {
+            setRegisterError('Password should be at least 6 characters and longer.')
+            return;
+        }
+        else if (!/([A-Z])(?=.*[a-z])/.test(password)) {
+            setRegisterError('Your password should have at last or one uppercase and lowercase characters.')
+            return;
+        }
+       else if (!accept) {
+            setRegisterError('Please accept your terms and conditions.')
+            return;
+        }
+        createUser(email, password)
+            .then(result => {
+                alert("Register successfully")
+                e.target.reset()
+                navigate('/login')
+            console.log(result)
+            })
+            .catch(error => {
+                setRegisterError(error.message)
+            console.log(error)
+        })
     }
     return (
         <div>
@@ -21,6 +56,9 @@ function Register() {
                         <form
                             onSubmit={handelRegister}
                             className="card-body">
+                            {
+                                registerError && <p className="text-red-600 bg-red-200 p-2 my-2">{registerError}</p>
+                            }
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Full Name</span>
