@@ -15,9 +15,11 @@ function Doctor({ doctor }) {
                     }
                 </p> 
             </div>
-            <button className="btn w-full rounded-none bg-orange-500 hover:bg-success">
-                <Link to={id}>Show details</Link>
-            </button>
+            <Link to={`/doctor/${id}`}>
+                <button className="btn w-full rounded-none bg-orange-500 hover:bg-success">
+                    Show Details
+                </button>
+            </Link>
     </div>
   )
 }

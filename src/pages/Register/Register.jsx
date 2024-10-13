@@ -1,5 +1,6 @@
 import { updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase/firebase.config";

@@ -42,8 +42,9 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><UserInfo/></PrivateRoute>
             },
             {
-                path: "/showDetails",
-                element:<ShowDetails/>
+                path: "/doctor/:id",
+                element: <ShowDetails />,
+                loader:()=>fetch('../doctors.json')
             }
         ]
     },
