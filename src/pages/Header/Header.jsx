@@ -15,7 +15,9 @@ function Header() {
     const navLinks = <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/services">Services</NavLink></li>
+        <li><NavLink to="/services">Services</NavLink></li>
+        <li><NavLink to="/showDetails">Show Details</NavLink></li>
+        
         {user &&
             <li><NavLink to="/userInfo">User Info</NavLink></li>
     }

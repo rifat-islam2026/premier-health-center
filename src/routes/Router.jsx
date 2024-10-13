@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
+import ShowDetails from "../pages/ShowDetails/ShowDetails";
 import UserInfo from "../pages/UserInfo/UserInfo";
 import PrivateRoute from "../providers/PrivateRoute";
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
             {
                 path: "/userInfo",
                 element:<PrivateRoute><UserInfo/></PrivateRoute>
+            },
+            {
+                path: "/showDetails",
+                element:<ShowDetails/>
             }
         ]
     },

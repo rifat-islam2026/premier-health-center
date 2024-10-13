@@ -1,6 +1,6 @@
 [
     {
-        "doctor_Image": "https://example.com/images/doctor1.jpg",
+        "doctor_Image": "https://i.ibb.co.com/hyM2W1N/doc1.png",
         "short_title": "Cardiologist Expert",
         "id": "1",
         "doctor_name": "Dr. John Smith",
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor2.jpg",
+        "doctor_Image": "https://i.ibb.co.com/Hgv4psW/doc2.png",
         "short_title": "Pediatrician Specialist",
         "id": "2",
         "doctor_name": "Dr. Emily Johnson",
@@ -32,7 +32,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor3.jpg",
+        "doctor_Image": "https://i.ibb.co.com/pWWWtcg/doc3.png",
         "short_title": "Dermatologist",
         "id": "3",
         "doctor_name": "Dr. Olivia Brown",
@@ -48,7 +48,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor4.jpg",
+        "doctor_Image": "https://i.ibb.co.com/dMnq0Kv/doc4.png",
         "short_title": "Orthopedic Surgeon",
         "id": "4",
         "doctor_name": "Dr. Michael Davis",
@@ -64,7 +64,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor5.jpg",
+        "doctor_Image": "https://i.ibb.co.com/zNgvFtv/doc5.png",
         "short_title": "Neurologist",
         "id": "5",
         "doctor_name": "Dr. Sophia Wilson",
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor6.jpg",
+        "doctor_Image": "https://i.ibb.co.com/BVr5k6p/doc6.png",
         "short_title": "General Practitioner",
         "id": "6",
         "doctor_name": "Dr. James Lee",
@@ -96,7 +96,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor7.jpg",
+        "doctor_Image": "https://i.ibb.co.com/hFLM8nj/doc7.png",
         "short_title": "ENT Specialist",
         "id": "7",
         "doctor_name": "Dr. Matthew Clark",
@@ -112,7 +112,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor8.jpg",
+        "doctor_Image": "https://i.ibb.co.com/DKncHwz/doc8.png",
         "short_title": "Ophthalmologist",
         "id": "8",
         "doctor_name": "Dr. Isabella Martinez",
@@ -128,7 +128,7 @@
         ]
     },
     {
-        "doctor_Image": "https://example.com/images/doctor9.jpg",
+        "doctor_Image": "https://i.ibb.co.com/PgVSYB7/doc9.png",
         "short_title": "Psychiatrist",
         "id": "9",
         "doctor_name": "Dr. William Harris",
