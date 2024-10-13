@@ -1,0 +1,146 @@
+[
+    {
+        "doctor_Image": "https://example.com/images/doctor1.jpg",
+        "short_title": "Cardiologist Expert",
+        "id": "1",
+        "doctor_name": "Dr. John Smith",
+        "description": "Expert in cardiovascular diseases with over 15 years of experience.",
+        "price": "150",
+        "Status": "sale",
+        "Area": "2200 sq ft",
+        "location": "New York, NY",
+        "facilities": [
+            "24/7 Emergency",
+            "Cardiac Surgery",
+            "ICU"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor2.jpg",
+        "short_title": "Pediatrician Specialist",
+        "id": "2",
+        "doctor_name": "Dr. Emily Johnson",
+        "description": "Specializes in child healthcare, offering personalized treatment plans.",
+        "price": "120",
+        "Status": "rent",
+        "Area": "1800 sq ft",
+        "location": "Los Angeles, CA",
+        "facilities": [
+            "Child Vaccination",
+            "Neonatal Care",
+            "Play Area"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor3.jpg",
+        "short_title": "Dermatologist",
+        "id": "3",
+        "doctor_name": "Dr. Olivia Brown",
+        "description": "Experienced dermatologist offering treatments for skin conditions and cosmetic procedures.",
+        "price": "200",
+        "Status": "sale",
+        "Area": "2500 sq ft",
+        "location": "Miami, FL",
+        "facilities": [
+            "Laser Treatment",
+            "Skin Care",
+            "Cosmetic Surgery"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor4.jpg",
+        "short_title": "Orthopedic Surgeon",
+        "id": "4",
+        "doctor_name": "Dr. Michael Davis",
+        "description": "Highly skilled orthopedic surgeon specializing in sports injuries and joint replacements.",
+        "price": "180",
+        "Status": "rent",
+        "Area": "2300 sq ft",
+        "location": "Chicago, IL",
+        "facilities": [
+            "Rehabilitation Center",
+            "Surgical Unit",
+            "Physiotherapy"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor5.jpg",
+        "short_title": "Neurologist",
+        "id": "5",
+        "doctor_name": "Dr. Sophia Wilson",
+        "description": "Leading neurologist focusing on treatment for neurological disorders like epilepsy and stroke.",
+        "price": "220",
+        "Status": "sale",
+        "Area": "2400 sq ft",
+        "location": "Houston, TX",
+        "facilities": [
+            "MRI Scans",
+            "Neuro Surgery",
+            "24/7 Monitoring"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor6.jpg",
+        "short_title": "General Practitioner",
+        "id": "6",
+        "doctor_name": "Dr. James Lee",
+        "description": "General healthcare services with a focus on preventive care and wellness.",
+        "price": "100",
+        "Status": "rent",
+        "Area": "2100 sq ft",
+        "location": "San Francisco, CA",
+        "facilities": [
+            "Walk-in Clinic",
+            "Lab Tests",
+            "Vaccinations"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor7.jpg",
+        "short_title": "ENT Specialist",
+        "id": "7",
+        "doctor_name": "Dr. Matthew Clark",
+        "description": "Ear, nose, and throat specialist offering surgical and non-surgical treatments.",
+        "price": "130",
+        "Status": "sale",
+        "Area": "2000 sq ft",
+        "location": "Phoenix, AZ",
+        "facilities": [
+            "Hearing Tests",
+            "Surgical Procedures",
+            "Audiology Services"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor8.jpg",
+        "short_title": "Ophthalmologist",
+        "id": "8",
+        "doctor_name": "Dr. Isabella Martinez",
+        "description": "Ophthalmologist specializing in vision care, cataract surgery, and LASIK procedures.",
+        "price": "170",
+        "Status": "rent",
+        "Area": "2700 sq ft",
+        "location": "Denver, CO",
+        "facilities": [
+            "Eye Surgery",
+            "Vision Testing",
+            "LASIK Center"
+        ]
+    },
+    {
+        "doctor_Image": "https://example.com/images/doctor9.jpg",
+        "short_title": "Psychiatrist",
+        "id": "9",
+        "doctor_name": "Dr. William Harris",
+        "description": "Leading psychiatrist specializing in mental health treatments and counseling.",
+        "price": "160",
+        "Status": "sale",
+        "Area": "1900 sq ft",
+        "location": "Seattle, WA",
+        "facilities": [
+            "Therapy Rooms",
+            "Counseling Services",
+            "Telehealth"
+        ]
+    }
+]
