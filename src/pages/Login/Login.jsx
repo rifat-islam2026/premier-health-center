@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 function Login() {
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const handelLogin = e => {
@@ -35,14 +37,40 @@ function Login() {
                 console.log(error)
             })
     }
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then(result => {
+                // Extract user information
+                const user = result.user;
+                console.log("Signed-in user info:", user);
+            })
+            .catch(error => {
+                console.error("Error during Google sign-in:", error.message);
+            });
+    }
+    const handelGithubLogin = () => {
+        signInWithGithub()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
+    
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Login</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div>
                 <div className="">
                     <div className="text-center">
                         <h1 className="text-5xl font-bold py-5">Please Login</h1>
                     </div>
-                    <div className="max-w-sm w-full shrink-0 border m-5 mx-auto">
+                    <div className="max-w-lg w-full shrink-0 border m-5 mx-auto">
                         <form
                             onSubmit={handelLogin}
                             className="card-body">
@@ -64,12 +92,22 @@ function Login() {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input
-                                    name="password"
-                                    type="password"
-                                    placeholder="password"
-                                    className="input input-bordered"
-                                    required />
+                                <div className="relative">
+                                    <input
+                                        name="password"
+                                        type={showPassword ? "password" : "text"}
+                                        placeholder="password"
+                                        className="input input-bordered w-full"
+                                        required />
+                                    <span
+                                        onClick={() => setShowPassword(!showPassword)}
+                                        className="absolute top-4 right-4 text-xl text-gray-500">
+                                        {showPassword ?
+                                            <FaEye /> :
+                                            <FaEyeSlash />
+                                        }
+                                    </span>
+                                </div>
                                 <div className="label flex items-center justify-between pt-2">
                                     <div className="flex gap-2">
                                         <input type="checkbox" name="terms" />
@@ -91,8 +129,12 @@ function Login() {
             <div className="text-center mb-10">
                 <span className="font-semibold">OR</span>
                 <br />
-                <button className="btn btn-outline rounded-full mt-5"> <FaGoogle className="text-lg" />  Login With Google</button> <br />
-                <button className="btn btn-outline rounded-full mt-3"> <FaGithub className="text-lg" />  Login With Github</button>
+                <button
+                    onClick={handleGoogleLogin}
+                    className="btn btn-outline rounded-full mt-5"> <FaGoogle className="text-lg" />  Login With Google</button> <br />
+                <button
+                    onClick={handelGithubLogin}
+                    className="btn btn-outline rounded-full mt-3"> <FaGithub className="text-lg" />  Login With Github</button>
             </div>
         </div>
     )
