@@ -113,7 +113,7 @@ function Register() {
                                 <div className="relative">
                                     <input
                                         name="password"
-                                        type={showPassword ? "password" : "text"}
+                                        type={showPassword ? "text" : "password"}
                                         placeholder="password"
                                         className="input input-bordered w-full"
                                         required />
