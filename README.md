@@ -1,7 +1,9 @@
 # React + Vite
 
-Live link : 
+Live link :  https://premier-health-center.web.app/ 
 
+used packages :
+ Animate.css,Swiper slider
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
