@@ -3,9 +3,10 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import auth from "../../firebase/firebase.config";
 import { AuthContext } from "../../providers/AuthProvider";
-
 
 function Register() {
     const { createUser} = useContext(AuthContext);
@@ -21,7 +22,7 @@ function Register() {
         const email = form.get('email');
         const password = form.get('password');
         const accept = e.target.terms.checked;
-        // console.log(accept);
+        const success = () => toast.success("Register successFully!");
         
         // reset error 
         setRegisterError('')
@@ -40,7 +41,7 @@ function Register() {
         }
         createUser(email, password)
             .then(result => {
-                alert("Register successfully")
+                success();
                 e.target.reset()
                 navigate('/login')
                 // updateProfile
@@ -71,7 +72,20 @@ function Register() {
                             onSubmit={handelRegister}
                             className="card-body">
                             {
-                                registerError && <p className="text-red-600 bg-red-200 p-2 my-2">{registerError}</p>
+                                registerError && <div role="alert" className="alert alert-warning">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-6 w-6 shrink-0 stroke-current"
+                                        fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                    </svg>
+                                    <span>{registerError}</span>
+                                </div>
                             }
                             <div className="form-control">
                                 <label className="label">
@@ -128,8 +142,8 @@ function Register() {
                                 </div>
                             </div>
                             <div className="label flex items-center justify-between pt-2">
-                                <div className="flex gap-2">
-                                    <input type="checkbox" name="terms" />
+                                <div className="flex items-center gap-2">
+                                    <input type="checkbox" name="terms" className="form-checkbox h-4 w-4 scale-110" />
                                     <p className="font-semibold">Remember Me</p>
                                 </div>
                                 <label className="label">

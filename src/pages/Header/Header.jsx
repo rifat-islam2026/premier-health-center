@@ -1,13 +1,16 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../providers/AuthProvider";
 
 function Header() {
     const { user ,logOut} = useContext(AuthContext);
     const handelSignOut = () => {
+        const success = () => toast.success("Sign out successFully!");
         logOut()
             .then(() => {
-                alert('Sign-out successful.')
+                success();
             }).catch((error) => {
                 // An error happened.
             });
