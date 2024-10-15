@@ -21,7 +21,7 @@ function Header() {
         <li><NavLink to="/services">Services</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
         {user &&
-            <li><NavLink to="/userInfo">User Info</NavLink></li>
+            <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
     }
     </>
   return (

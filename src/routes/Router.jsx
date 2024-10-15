@@ -11,7 +11,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
 import ShowDetails from "../pages/ShowDetails/ShowDetails";
-import UserInfo from "../pages/UserInfo/UserInfo";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import PrivateRoute from "../providers/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -45,8 +45,8 @@ const router = createBrowserRouter([
                 element:<Register/>
             },
             {
-                path: "/userInfo",
-                element:<PrivateRoute><UserInfo/></PrivateRoute>
+                path: "/updateProfile",
+                element:<PrivateRoute><UpdateProfile/></PrivateRoute>
             },
             {
                 path: "/doctor/:id",
